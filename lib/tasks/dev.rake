@@ -5,8 +5,9 @@ namespace :dev do
       show_spinner("Apagando BD...") { %x(rails db:drop) }
       show_spinner("Criando BD...") { %x(rails db:create) }
       show_spinner("Migrando BD...") { %x(rails db:migrate) }
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
+
     else
       puts "Você não está em ambiente de desenvolvimento"
     end
@@ -19,29 +20,34 @@ namespace :dev do
         {
           description: "Bitcoin",
           acronym: "BTC",
-          url_image: "https://toppng.com/uploads/preview/bitcoin-png-bitcoin-logo-transparent-background-11562933997uxok6gcqjp.png"
+          url_image: "https://toppng.com/uploads/preview/bitcoin-png-bitcoin-logo-transparent-background-11562933997uxok6gcqjp.png",
+          mining_type: MiningType.find_by(acronym: 'PoW')
         },
 
         {
           description: "Ethereum",
           acronym: "ETH",
-          url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo.png"
+          url_image: "https://w7.pngwing.com/pngs/368/176/png-transparent-ethereum-cryptocurrency-blockchain-bitcoin-logo-bitcoin-angle-triangle-logo.png",
+          mining_type: MiningType.all.sample
         },
 
         {
           description: "Dash",
           acronym: "DASH",
-          url_image: "https://flyclipart.com/thumb2/dash-coin-690652.png"
+          url_image: "https://flyclipart.com/thumb2/dash-coin-690652.png",
+          mining_type: MiningType.all.sample
         },
         {
           description: "Iota",
           acronym: "IOT",
-          url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency/512/IOTA-icon.png"
+          url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency/512/IOTA-icon.png",
+          mining_type: MiningType.all.sample
         },
         {
           description: "Zcash",
           acronym: "ZEC",
-          url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/512/Zcash-ZEC-icon.png"
+          url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/512/Zcash-ZEC-icon.png",
+          mining_type: MiningType.all.sample
         }
       ]
 
