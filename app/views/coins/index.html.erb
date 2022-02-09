@@ -8,7 +8,7 @@
   <% @coins.each do |coin| %>
     <%= render coin %>
     <p>
-      <strong><%= link_to "Mostrar", coin %></strong>
+      <strong><%= link_to t('links.show'), coin %></strong>
     </p>
   <% end %>
 </div>
