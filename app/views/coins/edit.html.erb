@@ -2,9 +2,6 @@
 
 <%= render "form", coin: @coin %>
 
-<br>
+<strong><%= link_to t('links.show'), @coin %></strong>
+<strong><%= link_to t('links.back'), coins_path %></strong>
 
-<div>
-  <strong><%= link_to t('links.show'), @coin %></strong>
-  <strong><%= link_to t('links.back'), coins_path %></strong>
- </div>

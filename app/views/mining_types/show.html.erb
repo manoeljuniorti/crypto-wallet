@@ -1,10 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @mining_type %>
+<p>
+  <strong><%=MiningType.human_attribute_name(:description)%></strong>
+  <%= @mining_type.description %>
+</p>
 
-<div>
-  <%= link_to t('links.edit'), edit_mining_type_path(@mining_type) %> |
-  <%= link_to t('links.back'), mining_types_path %> |
+<p>
+  <strong><%=MiningType.human_attribute_name(:acronym)%></strong>
+  <%= @mining_type.acronym %>
+</p>
 
-  <%= link_to t('links.delete'), @mining_type, method: :delete %>
-</div>
+
+<%= link_to t('links.edit'), edit_mining_type_path(@mining_type) %> |
+<%= link_to t('links.back'), mining_types_path %> |
+<%= link_to t('links.delete'), @mining_type, method: :delete %>
+

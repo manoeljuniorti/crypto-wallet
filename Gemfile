@@ -7,6 +7,8 @@ gem "pry-rails"
 gem "tty-spinner"
 gem 'rails-i18n', '~> 7.0.1'
 gem 'sassc-rails'
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
 
