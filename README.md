@@ -1,5 +1,5 @@
 # README
-
+![alt text](https://raw.githubusercontent.com/manoeljuniorti/crypto-wallet/main/app/assets/images/welcome_cripto.png)
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
